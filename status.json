@@ -48,8 +48,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Login page links to /verify-otp, but delivery is email only.",
-   "start": "2026-11-16",
-   "target": "2026-11-20"
+   "start": "2026-10-27",
+   "target": "2026-10-29"
   },
   {
    "id": 6,
@@ -88,8 +88,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Backend AuditService writes events. The Audit Logs page shows hard-coded SAMPLE_AUDIT_LOGS and no API call, so real logs are not visible.",
-   "start": "2026-11-09",
-   "target": "2026-11-13"
+   "start": "2026-10-27",
+   "target": "2026-10-29"
   },
   {
    "id": 10,
@@ -108,8 +108,8 @@
    "status": "Partial",
    "priority": "P2",
    "notes": "Entities exist, but there is no API or UI for them.",
-   "start": "2027-01-04",
-   "target": "2027-01-15"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 12,
@@ -118,8 +118,8 @@
    "status": "Not implemented",
    "priority": "P1",
    "notes": "Geography API is read-only (GET only).",
-   "start": "2026-11-16",
-   "target": "2026-11-27"
+   "start": "2026-10-29",
+   "target": "2026-11-02"
   },
   {
    "id": 13,
@@ -158,8 +158,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Page is about 66 lines. A thin shell with no district KPIs, queue or reports.",
-   "start": "2026-11-09",
-   "target": "2026-11-20"
+   "start": "2026-10-29",
+   "target": "2026-11-02"
   },
   {
    "id": 17,
@@ -168,8 +168,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Page is about 47 lines. A thin shell.",
-   "start": "2026-11-09",
-   "target": "2026-11-20"
+   "start": "2026-10-29",
+   "target": "2026-11-02"
   },
   {
    "id": 18,
@@ -208,8 +208,8 @@
    "status": "Not implemented",
    "priority": "P1",
    "notes": "Not on the Citizen entity.",
-   "start": "2026-11-16",
-   "target": "2026-11-27"
+   "start": "2026-10-29",
+   "target": "2026-11-02"
   },
   {
    "id": 22,
@@ -218,8 +218,8 @@
    "status": "Not implemented",
    "priority": "P1",
    "notes": "Not on the Citizen entity. Only Aadhaar is stored.",
-   "start": "2026-11-16",
-   "target": "2026-11-27"
+   "start": "2026-10-29",
+   "target": "2026-11-02"
   },
   {
    "id": 23,
@@ -228,8 +228,8 @@
    "status": "Not implemented",
    "priority": "P1",
    "notes": "Only a profile photo can be uploaded. S3 bucket config exists, but no document API or UI.",
-   "start": "2026-11-30",
-   "target": "2026-12-18"
+   "start": "2026-11-02",
+   "target": "2026-11-05"
   },
   {
    "id": 24,
@@ -238,8 +238,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "UI exists. The /members list is empty live because no member exists until an approval completes. The detail page falls back to sample data.",
-   "start": "2026-11-09",
-   "target": "2026-11-20"
+   "start": "2026-10-27",
+   "target": "2026-10-29"
   },
   {
    "id": 25,
@@ -248,8 +248,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Citizens search param and user search exist. No unified member search across all proposal fields.",
-   "start": "2026-11-23",
-   "target": "2026-12-04"
+   "start": "2026-10-29",
+   "target": "2026-11-02"
   },
   {
    "id": 26,
@@ -258,8 +258,8 @@
    "status": "Partial",
    "priority": "P2",
    "notes": "MembershipType entity exists. No UI to manage types or renewals.",
-   "start": "2027-01-04",
-   "target": "2027-01-15"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 27,
@@ -278,8 +278,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "UI is wired, but falls back to sample data when the API fails.",
-   "start": "2026-11-23",
-   "target": "2026-11-27"
+   "start": "2026-11-02",
+   "target": "2026-11-05"
   },
   {
    "id": 29,
@@ -288,8 +288,8 @@
    "status": "Not implemented",
    "priority": "P1",
    "notes": "Page uses hard-coded sample families (FAM-2026-9901) and makes no API calls.",
-   "start": "2026-11-23",
-   "target": "2026-12-04"
+   "start": "2026-11-02",
+   "target": "2026-11-05"
   },
   {
    "id": 30,
@@ -298,8 +298,8 @@
    "status": "Not implemented",
    "priority": "P1",
    "notes": "Backend /family-join APIs exist. No frontend page calls them.",
-   "start": "2026-11-30",
-   "target": "2026-12-11"
+   "start": "2026-11-02",
+   "target": "2026-11-05"
   },
   {
    "id": 31,
@@ -308,8 +308,8 @@
    "status": "Not implemented",
    "priority": "P2",
    "notes": "Not modelled.",
-   "start": "2027-01-18",
-   "target": "2027-01-29"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 32,
@@ -328,8 +328,8 @@
    "status": "Not implemented",
    "priority": "P0",
    "notes": "BROKEN. It reads response.content, but the API returns data.data, so the queue is always empty even with 3 pending tasks. Summary keys also do not match. On errors it shows fake tasks and counts (14 approved, 2 rejected).",
-   "start": "2026-10-28",
-   "target": "2026-11-03"
+   "start": "2026-10-24",
+   "target": "2026-10-27"
   },
   {
    "id": 34,
@@ -338,8 +338,8 @@
    "status": "Not implemented",
    "priority": "P0",
    "notes": "Same defect: reads .content, so real applications never appear. Sends page/size, but the API expects pageNo/pageSize.",
-   "start": "2026-10-26",
-   "target": "2026-10-29"
+   "start": "2026-10-24",
+   "target": "2026-10-27"
   },
   {
    "id": 35,
@@ -348,8 +348,8 @@
    "status": "Partial",
    "priority": "P0",
    "notes": "Not automatic. The member must press Submit on the Digital ID Card page. The backend creates one task for one approver only (first match) and not three.",
-   "start": "2026-10-30",
-   "target": "2026-11-05"
+   "start": "2026-10-24",
+   "target": "2026-10-27"
   },
   {
    "id": 36,
@@ -358,8 +358,8 @@
    "status": "Not implemented",
    "priority": "P0",
    "notes": "Sidebar hides 'Approvals Queue' from VILLAGE_ADMIN. The backend allows it.",
-   "start": "2026-10-29",
-   "target": "2026-10-30"
+   "start": "2026-10-24",
+   "target": "2026-10-27"
   },
   {
    "id": 37,
@@ -368,8 +368,8 @@
    "status": "Partial",
    "priority": "P0",
    "notes": "The /pending endpoint passes no status filter, so it returns all statuses. The UI cannot display the result because of the .content mismatch.",
-   "start": "2026-11-02",
-   "target": "2026-11-06"
+   "start": "2026-10-24",
+   "target": "2026-10-27"
   },
   {
    "id": 38,
@@ -378,8 +378,8 @@
    "status": "Not implemented",
    "priority": "P0",
    "notes": "Backend /return exists. The frontend API client has no method and the UI has no button.",
-   "start": "2026-11-03",
-   "target": "2026-11-05"
+   "start": "2026-10-24",
+   "target": "2026-10-27"
   },
   {
    "id": 39,
@@ -408,8 +408,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Backend creates in-app notifications. No visible notification centre in the UI.",
-   "start": "2026-11-16",
-   "target": "2026-11-20"
+   "start": "2026-10-27",
+   "target": "2026-10-29"
   },
   {
    "id": 42,
@@ -428,8 +428,8 @@
    "status": "Partial",
    "priority": "P0",
    "notes": "Page and POST /cards/verify exist. On error the page shows a demonstration result instead of failing, so a failed lookup could look valid.",
-   "start": "2026-10-28",
-   "target": "2026-10-30"
+   "start": "2026-10-24",
+   "target": "2026-10-27"
   },
   {
    "id": 44,
@@ -438,8 +438,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Reads .content, so the list is empty. Falls back to sample data.",
-   "start": "2026-11-09",
-   "target": "2026-11-13"
+   "start": "2026-10-27",
+   "target": "2026-10-29"
   },
   {
    "id": 45,
@@ -448,8 +448,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Backend and UI exist. Proposal targets such as tehsil, women, youth and seniors are not available.",
-   "start": "2026-11-30",
-   "target": "2026-12-11"
+   "start": "2026-11-05",
+   "target": "2026-11-09"
   },
   {
    "id": 46,
@@ -458,8 +458,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Backend stores them. No member-side inbox page.",
-   "start": "2026-11-16",
-   "target": "2026-11-27"
+   "start": "2026-10-27",
+   "target": "2026-10-29"
   },
   {
    "id": 47,
@@ -468,8 +468,8 @@
    "status": "Not implemented",
    "priority": "P1",
    "notes": "UI offers SMS options. Backend has no SMS, WhatsApp or FCM provider. Only OTP mail via JavaMailSender.",
-   "start": "2026-11-30",
-   "target": "2026-12-24"
+   "start": "2026-11-09",
+   "target": "2026-11-12"
   },
   {
    "id": 48,
@@ -478,8 +478,8 @@
    "status": "Partial",
    "priority": "P2",
    "notes": "Live outbox has pending events. The page keeps a mock fallback.",
-   "start": "2027-01-04",
-   "target": "2027-01-08"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 49,
@@ -488,8 +488,8 @@
    "status": "Not implemented",
    "priority": "P2",
    "notes": "No module in backend or frontend.",
-   "start": "2027-01-11",
-   "target": "2027-01-29"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 50,
@@ -508,8 +508,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Backend /events exists. No dedicated frontend. Member Events screen uses meetings.",
-   "start": "2026-11-30",
-   "target": "2026-12-11"
+   "start": "2026-11-05",
+   "target": "2026-11-09"
   },
   {
    "id": 52,
@@ -518,8 +518,8 @@
    "status": "Partial",
    "priority": "P2",
    "notes": "Geo check-in exists. No QR scan flow.",
-   "start": "2027-01-11",
-   "target": "2027-01-22"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 53,
@@ -528,8 +528,8 @@
    "status": "Partial",
    "priority": "P2",
    "notes": "Backend and page exist. Page falls back to sample data.",
-   "start": "2027-01-04",
-   "target": "2027-01-08"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 54,
@@ -538,8 +538,8 @@
    "status": "Not implemented",
    "priority": "P2",
    "notes": "No module.",
-   "start": "2027-01-18",
-   "target": "2027-02-05"
+   "start": "2026-11-16",
+   "target": "2026-11-20"
   },
   {
    "id": 55,
@@ -548,8 +548,8 @@
    "status": "Not implemented",
    "priority": "P2",
    "notes": "Not in backend or frontend.",
-   "start": "2027-01-18",
-   "target": "2027-02-05"
+   "start": "2026-11-16",
+   "target": "2026-11-20"
   },
   {
    "id": 56,
@@ -558,8 +558,8 @@
    "status": "Not implemented",
    "priority": "P2",
    "notes": "Not implemented.",
-   "start": "2027-02-08",
-   "target": "2027-02-19"
+   "start": "2026-11-16",
+   "target": "2026-11-20"
   },
   {
    "id": 57,
@@ -568,8 +568,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Backend complete. Both pages fall back to sample data on error.",
-   "start": "2026-12-14",
-   "target": "2026-12-18"
+   "start": "2026-11-05",
+   "target": "2026-11-09"
   },
   {
    "id": 58,
@@ -578,8 +578,8 @@
    "status": "Partial",
    "priority": "P2",
    "notes": "Backend complete. Pages fall back to sample polls and 'optimistic' votes.",
-   "start": "2027-01-04",
-   "target": "2027-01-08"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 59,
@@ -588,8 +588,8 @@
    "status": "Partial",
    "priority": "P2",
    "notes": "Backend and pages exist. Admin page falls back to sample data.",
-   "start": "2027-01-11",
-   "target": "2027-01-15"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 60,
@@ -598,8 +598,8 @@
    "status": "Partial",
    "priority": "P2",
    "notes": "Backend complete. Page falls back to sample committees.",
-   "start": "2027-01-18",
-   "target": "2027-01-22"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 61,
@@ -618,8 +618,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "UI exists. Fallback sample metrics. Payments page uses an 'optimistic fallback for demo'.",
-   "start": "2026-12-07",
-   "target": "2026-12-11"
+   "start": "2026-11-05",
+   "target": "2026-11-09"
   },
   {
    "id": 63,
@@ -628,8 +628,8 @@
    "status": "Not implemented",
    "priority": "P2",
    "notes": "Payments are marked complete or failed by API call. No gateway integration.",
-   "start": "2027-01-25",
-   "target": "2027-02-12"
+   "start": "2026-11-09",
+   "target": "2026-11-12"
   },
   {
    "id": 64,
@@ -648,8 +648,8 @@
    "status": "Not implemented",
    "priority": "P2",
    "notes": "Not in the API. Dashboard charts use demo data (flagged 'Demo data').",
-   "start": "2027-01-18",
-   "target": "2027-02-05"
+   "start": "2026-11-16",
+   "target": "2026-11-20"
   },
   {
    "id": 66,
@@ -658,8 +658,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Reports API exists (empty live). No reports UI.",
-   "start": "2026-11-30",
-   "target": "2026-12-11"
+   "start": "2026-11-05",
+   "target": "2026-11-09"
   },
   {
    "id": 67,
@@ -668,8 +668,8 @@
    "status": "Partial",
    "priority": "P1",
    "notes": "Export jobs create CSV file names only. No Excel or PDF.",
-   "start": "2026-12-14",
-   "target": "2026-12-24"
+   "start": "2026-11-05",
+   "target": "2026-11-09"
   },
   {
    "id": 68,
@@ -678,8 +678,8 @@
    "status": "Partial",
    "priority": "P2",
    "notes": "Import job API and UI exist. The UI shows a simulated job ('498 records') on error.",
-   "start": "2027-01-04",
-   "target": "2027-01-15"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   },
   {
    "id": 69,
@@ -688,8 +688,8 @@
    "status": "Partial",
    "priority": "P3",
    "notes": "Page and API exist. No settings stored.",
-   "start": "2027-02-15",
-   "target": "2027-02-19"
+   "start": "2026-11-20",
+   "target": "2026-11-25"
   },
   {
    "id": 70,
@@ -728,8 +728,8 @@
    "status": "Not implemented",
    "priority": "P3",
    "notes": "No i18n.",
-   "start": "2027-02-22",
-   "target": "2027-03-12"
+   "start": "2026-11-20",
+   "target": "2026-11-25"
   },
   {
    "id": 74,
@@ -738,8 +738,8 @@
    "status": "Not implemented",
    "priority": "P3",
    "notes": "Roadmap items. Not started.",
-   "start": "2027-03-15",
-   "target": "2027-06-30"
+   "start": "2026-11-25",
+   "target": "2026-12-15"
   },
   {
    "id": 75,
@@ -748,8 +748,8 @@
    "status": "Not implemented",
    "priority": "P2",
    "notes": "No evidence in the repo.",
-   "start": "2027-01-04",
-   "target": "2027-01-08"
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   }
  ]
 }

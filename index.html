@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AJKSA Delivery Status</title>
+<style>
+  :root { --bg:#f8fafc; --card:#fff; --ink:#0f172a; --mute:#64748b; --line:#e2e8f0;
+          --g:#15803d; --gb:#dcfce7; --a:#b45309; --ab:#fef3c7; --r:#b91c1c; --rb:#fee2e2; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0b1220; --card:#111a2e; --ink:#e5edf9; --mute:#94a3b8; --line:#23304d;
+            --g:#86efac; --gb:#12301f; --a:#fcd34d; --ab:#3a2c0b; --r:#fca5a5; --rb:#3b1414; }
+  }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif }
+  main { max-width:1200px; margin:0 auto; padding:24px 16px 48px }
+  h1 { margin:0 0 4px; font-size:24px }
+  .sub { color:var(--mute); margin:0 0 18px }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:14px }
+  .tile { border-radius:10px; padding:12px 14px; background:var(--card); border:1px solid var(--line) }
+  .tile b { display:block; font-size:26px }
+  .tile.g { background:var(--gb); color:var(--g) } .tile.a { background:var(--ab); color:var(--a) } .tile.r { background:var(--rb); color:var(--r) }
+  .bar { height:10px; border-radius:6px; background:var(--line); overflow:hidden; display:flex; margin-bottom:18px }
+  .bar i { display:block; height:100% } .bar .g{background:var(--g)} .bar .a{background:var(--a)} .bar .r{background:var(--r)}
+  .filters { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px }
+  select, input { padding:7px 9px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); font:inherit }
+  input { flex:1; min-width:180px }
+  h2 { font-size:14px; margin:22px 0 6px; padding:8px 12px; background:var(--ink); color:var(--bg); border-radius:8px 8px 0 0 }
+  .wrap { overflow-x:auto; border:1px solid var(--line); border-top:0; border-radius:0 0 8px 8px }
+  table { width:100%; border-collapse:collapse; min-width:760px }
+  th { text-align:left; font-size:12px; color:var(--mute); padding:7px 10px; border-bottom:1px solid var(--line) }
+  td { padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top }
+  tr.g td { background:var(--gb) } tr.a td { background:var(--ab) } tr.r td { background:var(--rb) }
+  tr:last-child td { border-bottom:0 }
+  .st { font-weight:700; white-space:nowrap } tr.g .st{color:var(--g)} tr.a .st{color:var(--a)} tr.r .st{color:var(--r)}
+  .pri { font-weight:700 } .date { white-space:nowrap; font-weight:600 }
+  .note { color:var(--mute); font-size:13px } td.f { font-weight:600; min-width:220px }
+  .late { color:var(--r) }
+  footer { color:var(--mute); margin-top:20px; font-size:12px }
+</style>
+</head>
+<body>
+<main>
+  <h1>AJKSA Community Platform: Delivery Status</h1>
+  <p class="sub" id="sub">Loading...</p>
+  <div class="tiles" id="tiles"></div>
+  <div class="bar" id="bar" aria-hidden="true"></div>
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search features" aria-label="Search features">
+    <select id="fs" aria-label="Status"><option value="">All statuses</option><option>Implemented</option><option>Partial</option><option>Not implemented</option></select>
+    <select id="fp" aria-label="Priority"><option value="">All priorities</option><option>P0</option><option>P1</option><option>P2</option><option>P3</option></select>
+  </div>
+  <div id="out"></div>
+  <footer>Priority: P0 blocks the core workflow, P1 high, P2 medium, P3 low. Target dates assume 2 developers, Monday to Friday.</footer>
+</main>
+<script>
+const CLS = { "Implemented":"g", "Partial":"a", "Not implemented":"r" };
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+const fmt = d => d ? new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day:"numeric", month:"short", year:"2-digit" }) : "";
+let data = null;
+
+function render() {
+  const q = $("q").value.toLowerCase(), fs = $("fs").value, fp = $("fp").value;
+  const rows = data.features.filter(f => (!fs || f.status === fs) && (!fp || f.priority === fp) &&
+    (!q || (f.feature + " " + f.notes + " " + f.module).toLowerCase().includes(q)));
+  const today = new Date().toISOString().slice(0, 10);
+  const byMod = {};
+  rows.forEach(f => (byMod[f.module] ||= []).push(f));
+  $("out").innerHTML = Object.entries(byMod).map(([m, list]) => `
+    <h2>${esc(m)}</h2><div class="wrap"><table>
+    <thead><tr><th>#</th><th>Feature</th><th>Status</th><th>Priority</th><th>Target</th><th>Notes</th></tr></thead><tbody>
+    ${list.map(f => {
+      const late = f.target && f.status !== "Implemented" && f.target < today;
+      const when = f.status === "Implemented" && !f.target ? "Done" : fmt(f.target);
+      return `<tr class="${CLS[f.status]}"><td>${f.id}</td><td class="f">${esc(f.feature)}</td>
+        <td class="st">${esc(f.status)}</td><td class="pri">${esc(f.priority)}</td>
+        <td class="date ${late ? "late" : ""}">${when}${late ? " (overdue)" : ""}</td><td class="note">${esc(f.notes)}</td></tr>`;
+    }).join("")}</tbody></table></div>`).join("") || "<p>No features match.</p>";
+}
+
+fetch("status.json?" + Date.now()).then(r => r.json()).then(d => {
+  data = d;
+  const c = { Implemented:0, Partial:0, "Not implemented":0 };
+  d.features.forEach(f => c[f.status]++);
+  const n = d.features.length;
+  $("sub").textContent = `Last updated ${fmt(d.updated)}. ${n} features tracked against the business proposal.`;
+  $("tiles").innerHTML = `<div class="tile"><b>${n}</b>Total</div>
+    <div class="tile g"><b>${c.Implemented}</b>Implemented</div>
+    <div class="tile a"><b>${c.Partial}</b>Partial</div>
+    <div class="tile r"><b>${c["Not implemented"]}</b>Not implemented</div>`;
+  $("bar").innerHTML = `<i class="g" style="width:${c.Implemented/n*100}%"></i><i class="a" style="width:${c.Partial/n*100}%"></i><i class="r" style="width:${c["Not implemented"]/n*100}%"></i>`;
+  ["q","fs","fp"].forEach(id => $(id).addEventListener("input", render));
+  render();
+}).catch(() => { $("sub").textContent = "Could not load status.json."; });
+</script>
+</body>
+</html>

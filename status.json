@@ -375,9 +375,9 @@
    "id": 38,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Return for correction / request changes (admin UI)",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "Admins can return an application for correction with a reason. The member is notified, updates the profile and resubmits.",
+   "status": "Not implemented",
+   "priority": "P3",
+   "notes": "Backend /return endpoint exists. The admin UI button and frontend API method are not built yet.",
    "start": "2026-10-24",
    "target": "2026-10-27"
   },

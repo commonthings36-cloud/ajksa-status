@@ -313,446 +313,6 @@
   },
   {
    "id": 32,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "Backend: submit, 3-tier routing, tasks, history, approve / reject / return",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "Routes Village Admin, then District Admin, then Super Admin. Approval creates the Member and issues the card. Live: 3 applications and 3 pending tasks exist.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 33,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "Approval Queue page (/admin/approvals)",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "Pending approval tasks for the logged-in admin, with summary counts (pending, approved, rejected). Admins can approve, reject or return a task with a reason.",
-   "start": "2026-10-24",
-   "target": "2026-10-27"
-  },
-  {
-   "id": 34,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "Applications list page (/admin/applications)",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "Lists membership applications with status filter and pagination, scoped to the admin's village, district or the whole community.",
-   "start": "2026-10-24",
-   "target": "2026-10-27"
-  },
-  {
-   "id": 35,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "Profile completed -> goes to village, district and super admin",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "When a member completes their profile, the application is submitted for approval and reaches the Village Admin, District Admin and Super Admin.",
-   "start": "2026-10-24",
-   "target": "2026-10-27"
-  },
-  {
-   "id": 36,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "Village admin can see the queue",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "Village Admins can open the Approvals Queue and act on applications from their own village.",
-   "start": "2026-10-24",
-   "target": "2026-10-27"
-  },
-  {
-   "id": 37,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "District / Super admin see applications in their scope",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "District Admins see applications in their district and Super Admins see all of them, filtered by status.",
-   "start": "2026-10-24",
-   "target": "2026-10-27"
-  },
-  {
-   "id": 38,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "Return for correction / request changes (admin UI)",
-   "status": "Not implemented",
-   "priority": "P3",
-   "notes": "Backend /return endpoint exists. The admin UI button and frontend API method are not built yet.",
-   "start": "2026-10-24",
-   "target": "2026-10-27"
-  },
-  {
-   "id": 39,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "Applicant sees status, correction reason, can resubmit",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "CardAccessGate shows each state and has resubmit.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 40,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "Card unlocks only after approval",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "Server-calculated card_eligible gates /member/card.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 41,
-   "module": "5. Membership Approval Workflow (key gap raised)",
-   "feature": "Notify approver and applicant",
-   "status": "Partial",
-   "priority": "P1",
-   "notes": "Backend creates in-app notifications. No visible notification centre in the UI.",
-   "start": "2026-10-27",
-   "target": "2026-10-29"
-  },
-  {
-   "id": 42,
-   "module": "6. Digital Membership Card & Verification",
-   "feature": "Digital card (front and back, photo, QR)",
-   "status": "Implemented",
-   "priority": "P0",
-   "notes": "DigitalMembershipCard + qrcode.react. Printable.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 43,
-   "module": "6. Digital Membership Card & Verification",
-   "feature": "Public QR verification page",
-   "status": "Partial",
-   "priority": "P0",
-   "notes": "Page and POST /cards/verify exist. On error the page shows a demonstration result instead of failing, so a failed lookup could look valid.",
-   "start": "2026-10-24",
-   "target": "2026-10-27"
-  },
-  {
-   "id": 44,
-   "module": "6. Digital Membership Card & Verification",
-   "feature": "Admin card list, issue, revoke",
-   "status": "Partial",
-   "priority": "P1",
-   "notes": "Reads .content, so the list is empty. Falls back to sample data.",
-   "start": "2026-10-27",
-   "target": "2026-10-29"
-  },
-  {
-   "id": 45,
-   "module": "7. Communication",
-   "feature": "Targeted broadcast (district, village, role)",
-   "status": "Partial",
-   "priority": "P1",
-   "notes": "Backend and UI exist. Proposal targets such as tehsil, women, youth and seniors are not available.",
-   "start": "2026-11-05",
-   "target": "2026-11-09"
-  },
-  {
-   "id": 46,
-   "module": "7. Communication",
-   "feature": "In-app notifications",
-   "status": "Partial",
-   "priority": "P1",
-   "notes": "Backend stores them. No member-side inbox page.",
-   "start": "2026-10-27",
-   "target": "2026-10-29"
-  },
-  {
-   "id": 47,
-   "module": "7. Communication",
-   "feature": "SMS / WhatsApp / Push (FCM) / Email delivery",
-   "status": "Not implemented",
-   "priority": "P1",
-   "notes": "UI offers SMS options. Backend has no SMS, WhatsApp or FCM provider. Only OTP mail via JavaMailSender.",
-   "start": "2026-11-09",
-   "target": "2026-11-12"
-  },
-  {
-   "id": 48,
-   "module": "7. Communication",
-   "feature": "Outbox monitoring",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Live outbox has pending events. The page keeps a mock fallback.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 49,
-   "module": "7. Communication",
-   "feature": "Community news feed, notices, circulars with media",
-   "status": "Not implemented",
-   "priority": "P2",
-   "notes": "No module in backend or frontend.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 50,
-   "module": "8. Events, Meetings & Volunteers",
-   "feature": "Meetings: create, RSVP, geofenced check-in, report",
-   "status": "Implemented",
-   "priority": "P1",
-   "notes": "Backend /meetings full set. Admin and member pages exist. Member events page falls back to sample meetings.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 51,
-   "module": "8. Events, Meetings & Volunteers",
-   "feature": "Events (create, register)",
-   "status": "Partial",
-   "priority": "P1",
-   "notes": "Backend /events exists. No dedicated frontend. Member Events screen uses meetings.",
-   "start": "2026-11-05",
-   "target": "2026-11-09"
-  },
-  {
-   "id": 52,
-   "module": "8. Events, Meetings & Volunteers",
-   "feature": "QR event attendance",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Geo check-in exists. No QR scan flow.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 53,
-   "module": "8. Events, Meetings & Volunteers",
-   "feature": "Campaigns",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Backend and page exist. Page falls back to sample data.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 54,
-   "module": "8. Events, Meetings & Volunteers",
-   "feature": "Volunteer management (skills, availability, blood donor)",
-   "status": "Not implemented",
-   "priority": "P2",
-   "notes": "No module.",
-   "start": "2026-11-16",
-   "target": "2026-11-20"
-  },
-  {
-   "id": 55,
-   "module": "9. Emergency & Safety",
-   "feature": "SOS button, I'm Safe check-in, emergency contact alerts",
-   "status": "Not implemented",
-   "priority": "P2",
-   "notes": "Not in backend or frontend.",
-   "start": "2026-11-16",
-   "target": "2026-11-20"
-  },
-  {
-   "id": 56,
-   "module": "9. Emergency & Safety",
-   "feature": "Consent-based temporary location sharing",
-   "status": "Not implemented",
-   "priority": "P2",
-   "notes": "Not implemented.",
-   "start": "2026-11-16",
-   "target": "2026-11-20"
-  },
-  {
-   "id": 57,
-   "module": "10. Governance & Community Services",
-   "feature": "Grievances (raise, assign, resolve)",
-   "status": "Partial",
-   "priority": "P1",
-   "notes": "Backend complete. Both pages fall back to sample data on error.",
-   "start": "2026-11-05",
-   "target": "2026-11-09"
-  },
-  {
-   "id": 58,
-   "module": "10. Governance & Community Services",
-   "feature": "Polls and voting",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Backend complete. Pages fall back to sample polls and 'optimistic' votes.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 59,
-   "module": "10. Governance & Community Services",
-   "feature": "Life events (birth, death, marriage) and verification",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Backend and pages exist. Admin page falls back to sample data.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 60,
-   "module": "10. Governance & Community Services",
-   "feature": "Committees and member assignment",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Backend complete. Page falls back to sample committees.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 61,
-   "module": "11. Finance",
-   "feature": "Subscriptions, payments, donations, financial summary (API)",
-   "status": "Implemented",
-   "priority": "P1",
-   "notes": "Live: /finance/summary, /subscriptions, /donations return 200.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 62,
-   "module": "11. Finance",
-   "feature": "Finance pages",
-   "status": "Partial",
-   "priority": "P1",
-   "notes": "UI exists. Fallback sample metrics. Payments page uses an 'optimistic fallback for demo'.",
-   "start": "2026-11-05",
-   "target": "2026-11-09"
-  },
-  {
-   "id": 63,
-   "module": "11. Finance",
-   "feature": "Online payment gateway",
-   "status": "Not implemented",
-   "priority": "P2",
-   "notes": "Payments are marked complete or failed by API call. No gateway integration.",
-   "start": "2026-11-09",
-   "target": "2026-11-12"
-  },
-  {
-   "id": 64,
-   "module": "12. Reports, Analytics & Data",
-   "feature": "Executive analytics dashboard",
-   "status": "Implemented",
-   "priority": "P1",
-   "notes": "Live KPIs via /analytics/dashboard.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 65,
-   "module": "12. Reports, Analytics & Data",
-   "feature": "Population, occupation and health analytics (proposal)",
-   "status": "Not implemented",
-   "priority": "P2",
-   "notes": "Not in the API. Dashboard charts use demo data (flagged 'Demo data').",
-   "start": "2026-11-16",
-   "target": "2026-11-20"
-  },
-  {
-   "id": 66,
-   "module": "12. Reports, Analytics & Data",
-   "feature": "Report generation by village, district, gender, age",
-   "status": "Partial",
-   "priority": "P1",
-   "notes": "Reports API exists (empty live). No reports UI.",
-   "start": "2026-11-05",
-   "target": "2026-11-09"
-  },
-  {
-   "id": 67,
-   "module": "12. Reports, Analytics & Data",
-   "feature": "Export to CSV / Excel / PDF",
-   "status": "Partial",
-   "priority": "P1",
-   "notes": "Export jobs create CSV file names only. No Excel or PDF.",
-   "start": "2026-11-05",
-   "target": "2026-11-09"
-  },
-  {
-   "id": 68,
-   "module": "12. Reports, Analytics & Data",
-   "feature": "Bulk import",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Import job API and UI exist. The UI shows a simulated job ('498 records') on error.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 69,
-   "module": "12. Reports, Analytics & Data",
-   "feature": "System settings",
-   "status": "Partial",
-   "priority": "P3",
-   "notes": "Page and API exist. No settings stored.",
-   "start": "2026-11-20",
-   "target": "2026-11-25"
-  },
-  {
-   "id": 70,
-   "module": "13. Platform / Non-functional",
-   "feature": "Payload encryption (AES-GCM)",
-   "status": "Implemented",
-   "priority": "P1",
-   "notes": "Backend filter, key provider and tests pass. Frontend does not use it.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 71,
-   "module": "13. Platform / Non-functional",
-   "feature": "Backend automated tests",
-   "status": "Implemented",
-   "priority": "P1",
-   "notes": "102 tests across 26 classes, 0 failures (report dated 19 Oct 2026). I could not re-run: Maven is not installed here.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 72,
-   "module": "13. Platform / Non-functional",
-   "feature": "Frontend type-check",
-   "status": "Implemented",
-   "priority": "P1",
-   "notes": "tsc --noEmit passes with no errors. There are no frontend tests; the e2e script references Playwright, which is not installed.",
-   "start": null,
-   "target": null
-  },
-  {
-   "id": 73,
-   "module": "13. Platform / Non-functional",
-   "feature": "Multi-language support",
-   "status": "Not implemented",
-   "priority": "P3",
-   "notes": "No i18n.",
-   "start": "2026-11-20",
-   "target": "2026-11-25"
-  },
-  {
-   "id": 74,
-   "module": "13. Platform / Non-functional",
-   "feature": "Mobile apps, offline sync, AI search",
-   "status": "Not implemented",
-   "priority": "P3",
-   "notes": "Roadmap items. Not started.",
-   "start": "2026-11-25",
-   "target": "2026-12-15"
-  },
-  {
-   "id": 75,
-   "module": "13. Platform / Non-functional",
-   "feature": "Daily automated backups",
-   "status": "Not implemented",
-   "priority": "P2",
-   "notes": "No evidence in the repo.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 76,
    "module": "4. Household & Family",
    "feature": "Household create or join on profile (family code, relationship)",
    "status": "Implemented",
@@ -762,7 +322,107 @@
    "target": null
   },
   {
-   "id": 77,
+   "id": 33,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Backend: submit, 3-tier routing, tasks, history, approve / reject / return",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "Routes Village Admin, then District Admin, then Super Admin. Approval creates the Member and issues the card. Live: 3 applications and 3 pending tasks exist.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 34,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Approval Queue page (/admin/approvals)",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "Pending approval tasks for the logged-in admin, with summary counts (pending, approved, rejected). Admins can approve, reject or return a task with a reason.",
+   "start": "2026-10-24",
+   "target": "2026-10-27"
+  },
+  {
+   "id": 35,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Applications list page (/admin/applications)",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "Lists membership applications with status filter and pagination, scoped to the admin's village, district or the whole community.",
+   "start": "2026-10-24",
+   "target": "2026-10-27"
+  },
+  {
+   "id": 36,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Profile completed -> goes to village, district and super admin",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "When a member completes their profile, the application is submitted for approval and reaches the Village Admin, District Admin and Super Admin.",
+   "start": "2026-10-24",
+   "target": "2026-10-27"
+  },
+  {
+   "id": 37,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Village admin can see the queue",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "Village Admins can open the Approvals Queue and act on applications from their own village.",
+   "start": "2026-10-24",
+   "target": "2026-10-27"
+  },
+  {
+   "id": 38,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "District / Super admin see applications in their scope",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "District Admins see applications in their district and Super Admins see all of them, filtered by status.",
+   "start": "2026-10-24",
+   "target": "2026-10-27"
+  },
+  {
+   "id": 39,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Return for correction / request changes (admin UI)",
+   "status": "Not implemented",
+   "priority": "P3",
+   "notes": "Backend /return endpoint exists. The admin UI button and frontend API method are not built yet.",
+   "start": "2026-10-24",
+   "target": "2026-10-27"
+  },
+  {
+   "id": 40,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Applicant sees status, correction reason, can resubmit",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "CardAccessGate shows each state and has resubmit.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 41,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Card unlocks only after approval",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "Server-calculated card_eligible gates /member/card.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 42,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Notify approver and applicant",
+   "status": "Partial",
+   "priority": "P1",
+   "notes": "Backend creates in-app notifications. No visible notification centre in the UI.",
+   "start": "2026-10-27",
+   "target": "2026-10-29"
+  },
+  {
+   "id": 43,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Household join approval (village, district, super admin chain)",
    "status": "Implemented",
@@ -770,6 +430,346 @@
    "notes": "Joining is a request, not instant membership. It follows the village, district, super admin approval chain, routed by the household's location. On approval the member moves into the household with their relationship; on rejection the request is dropped; if returned for correction it stays on file. Reviewers see 'Joining household X as Daughter (head: ...)' in the approval modal and table. Members see a 'Waiting for approval' banner.",
    "start": null,
    "target": null
+  },
+  {
+   "id": 44,
+   "module": "6. Digital Membership Card & Verification",
+   "feature": "Digital card (front and back, photo, QR)",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "DigitalMembershipCard + qrcode.react. Printable.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 45,
+   "module": "6. Digital Membership Card & Verification",
+   "feature": "Public QR verification page",
+   "status": "Partial",
+   "priority": "P0",
+   "notes": "Page and POST /cards/verify exist. On error the page shows a demonstration result instead of failing, so a failed lookup could look valid.",
+   "start": "2026-10-24",
+   "target": "2026-10-27"
+  },
+  {
+   "id": 46,
+   "module": "6. Digital Membership Card & Verification",
+   "feature": "Admin card list, issue, revoke",
+   "status": "Partial",
+   "priority": "P1",
+   "notes": "Reads .content, so the list is empty. Falls back to sample data.",
+   "start": "2026-10-27",
+   "target": "2026-10-29"
+  },
+  {
+   "id": 47,
+   "module": "7. Communication",
+   "feature": "Targeted broadcast (district, village, role)",
+   "status": "Partial",
+   "priority": "P1",
+   "notes": "Backend and UI exist. Proposal targets such as tehsil, women, youth and seniors are not available.",
+   "start": "2026-11-05",
+   "target": "2026-11-09"
+  },
+  {
+   "id": 48,
+   "module": "7. Communication",
+   "feature": "In-app notifications",
+   "status": "Partial",
+   "priority": "P1",
+   "notes": "Backend stores them. No member-side inbox page.",
+   "start": "2026-10-27",
+   "target": "2026-10-29"
+  },
+  {
+   "id": 49,
+   "module": "7. Communication",
+   "feature": "SMS / WhatsApp / Push (FCM) / Email delivery",
+   "status": "Not implemented",
+   "priority": "P1",
+   "notes": "UI offers SMS options. Backend has no SMS, WhatsApp or FCM provider. Only OTP mail via JavaMailSender.",
+   "start": "2026-11-09",
+   "target": "2026-11-12"
+  },
+  {
+   "id": 50,
+   "module": "7. Communication",
+   "feature": "Outbox monitoring",
+   "status": "Partial",
+   "priority": "P2",
+   "notes": "Live outbox has pending events. The page keeps a mock fallback.",
+   "start": "2026-11-12",
+   "target": "2026-11-16"
+  },
+  {
+   "id": 51,
+   "module": "7. Communication",
+   "feature": "Community news feed, notices, circulars with media",
+   "status": "Not implemented",
+   "priority": "P2",
+   "notes": "No module in backend or frontend.",
+   "start": "2026-11-12",
+   "target": "2026-11-16"
+  },
+  {
+   "id": 52,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Meetings: create, RSVP, geofenced check-in, report",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Backend /meetings full set. Admin and member pages exist. Member events page falls back to sample meetings.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 53,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Events (create, register)",
+   "status": "Partial",
+   "priority": "P1",
+   "notes": "Backend /events exists. No dedicated frontend. Member Events screen uses meetings.",
+   "start": "2026-11-05",
+   "target": "2026-11-09"
+  },
+  {
+   "id": 54,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "QR event attendance",
+   "status": "Partial",
+   "priority": "P2",
+   "notes": "Geo check-in exists. No QR scan flow.",
+   "start": "2026-11-12",
+   "target": "2026-11-16"
+  },
+  {
+   "id": 55,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Campaigns",
+   "status": "Partial",
+   "priority": "P2",
+   "notes": "Backend and page exist. Page falls back to sample data.",
+   "start": "2026-11-12",
+   "target": "2026-11-16"
+  },
+  {
+   "id": 56,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Volunteer management (skills, availability, blood donor)",
+   "status": "Not implemented",
+   "priority": "P2",
+   "notes": "No module.",
+   "start": "2026-11-16",
+   "target": "2026-11-20"
+  },
+  {
+   "id": 57,
+   "module": "9. Emergency & Safety",
+   "feature": "SOS button, I'm Safe check-in, emergency contact alerts",
+   "status": "Not implemented",
+   "priority": "P2",
+   "notes": "Not in backend or frontend.",
+   "start": "2026-11-16",
+   "target": "2026-11-20"
+  },
+  {
+   "id": 58,
+   "module": "9. Emergency & Safety",
+   "feature": "Consent-based temporary location sharing",
+   "status": "Not implemented",
+   "priority": "P2",
+   "notes": "Not implemented.",
+   "start": "2026-11-16",
+   "target": "2026-11-20"
+  },
+  {
+   "id": 59,
+   "module": "10. Governance & Community Services",
+   "feature": "Grievances (raise, assign, resolve)",
+   "status": "Partial",
+   "priority": "P1",
+   "notes": "Backend complete. Both pages fall back to sample data on error.",
+   "start": "2026-11-05",
+   "target": "2026-11-09"
+  },
+  {
+   "id": 60,
+   "module": "10. Governance & Community Services",
+   "feature": "Polls and voting",
+   "status": "Partial",
+   "priority": "P2",
+   "notes": "Backend complete. Pages fall back to sample polls and 'optimistic' votes.",
+   "start": "2026-11-12",
+   "target": "2026-11-16"
+  },
+  {
+   "id": 61,
+   "module": "10. Governance & Community Services",
+   "feature": "Life events (birth, death, marriage) and verification",
+   "status": "Partial",
+   "priority": "P2",
+   "notes": "Backend and pages exist. Admin page falls back to sample data.",
+   "start": "2026-11-12",
+   "target": "2026-11-16"
+  },
+  {
+   "id": 62,
+   "module": "10. Governance & Community Services",
+   "feature": "Committees and member assignment",
+   "status": "Partial",
+   "priority": "P2",
+   "notes": "Backend complete. Page falls back to sample committees.",
+   "start": "2026-11-12",
+   "target": "2026-11-16"
+  },
+  {
+   "id": 63,
+   "module": "11. Finance",
+   "feature": "Subscriptions, payments, donations, financial summary (API)",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Live: /finance/summary, /subscriptions, /donations return 200.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 64,
+   "module": "11. Finance",
+   "feature": "Finance pages",
+   "status": "Partial",
+   "priority": "P1",
+   "notes": "UI exists. Fallback sample metrics. Payments page uses an 'optimistic fallback for demo'.",
+   "start": "2026-11-05",
+   "target": "2026-11-09"
+  },
+  {
+   "id": 65,
+   "module": "11. Finance",
+   "feature": "Online payment gateway",
+   "status": "Not implemented",
+   "priority": "P2",
+   "notes": "Payments are marked complete or failed by API call. No gateway integration.",
+   "start": "2026-11-09",
+   "target": "2026-11-12"
+  },
+  {
+   "id": 66,
+   "module": "12. Reports, Analytics & Data",
+   "feature": "Executive analytics dashboard",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Live KPIs via /analytics/dashboard.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 67,
+   "module": "12. Reports, Analytics & Data",
+   "feature": "Population, occupation and health analytics (proposal)",
+   "status": "Not implemented",
+   "priority": "P2",
+   "notes": "Not in the API. Dashboard charts use demo data (flagged 'Demo data').",
+   "start": "2026-11-16",
+   "target": "2026-11-20"
+  },
+  {
+   "id": 68,
+   "module": "12. Reports, Analytics & Data",
+   "feature": "Report generation by village, district, gender, age",
+   "status": "Partial",
+   "priority": "P1",
+   "notes": "Reports API exists (empty live). No reports UI.",
+   "start": "2026-11-05",
+   "target": "2026-11-09"
+  },
+  {
+   "id": 69,
+   "module": "12. Reports, Analytics & Data",
+   "feature": "Export to CSV / Excel / PDF",
+   "status": "Partial",
+   "priority": "P1",
+   "notes": "Export jobs create CSV file names only. No Excel or PDF.",
+   "start": "2026-11-05",
+   "target": "2026-11-09"
+  },
+  {
+   "id": 70,
+   "module": "12. Reports, Analytics & Data",
+   "feature": "Bulk import",
+   "status": "Partial",
+   "priority": "P2",
+   "notes": "Import job API and UI exist. The UI shows a simulated job ('498 records') on error.",
+   "start": "2026-11-12",
+   "target": "2026-11-16"
+  },
+  {
+   "id": 71,
+   "module": "12. Reports, Analytics & Data",
+   "feature": "System settings",
+   "status": "Partial",
+   "priority": "P3",
+   "notes": "Page and API exist. No settings stored.",
+   "start": "2026-11-20",
+   "target": "2026-11-25"
+  },
+  {
+   "id": 72,
+   "module": "13. Platform / Non-functional",
+   "feature": "Payload encryption (AES-GCM)",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Backend filter, key provider and tests pass. Frontend does not use it.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 73,
+   "module": "13. Platform / Non-functional",
+   "feature": "Backend automated tests",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "102 tests across 26 classes, 0 failures (report dated 19 Oct 2026). I could not re-run: Maven is not installed here.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 74,
+   "module": "13. Platform / Non-functional",
+   "feature": "Frontend type-check",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "tsc --noEmit passes with no errors. There are no frontend tests; the e2e script references Playwright, which is not installed.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 75,
+   "module": "13. Platform / Non-functional",
+   "feature": "Multi-language support",
+   "status": "Not implemented",
+   "priority": "P3",
+   "notes": "No i18n.",
+   "start": "2026-11-20",
+   "target": "2026-11-25"
+  },
+  {
+   "id": 76,
+   "module": "13. Platform / Non-functional",
+   "feature": "Mobile apps, offline sync, AI search",
+   "status": "Not implemented",
+   "priority": "P3",
+   "notes": "Roadmap items. Not started.",
+   "start": "2026-11-25",
+   "target": "2026-12-15"
+  },
+  {
+   "id": 77,
+   "module": "13. Platform / Non-functional",
+   "feature": "Daily automated backups",
+   "status": "Not implemented",
+   "priority": "P2",
+   "notes": "No evidence in the repo.",
+   "start": "2026-11-12",
+   "target": "2026-11-16"
   }
  ]
 }

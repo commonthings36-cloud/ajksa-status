@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "features": [
   {
    "id": 1,
@@ -275,31 +275,31 @@
    "id": 28,
    "module": "4. Household & Family",
    "feature": "Households admin page",
-   "status": "Partial",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "UI is wired, but falls back to sample data when the API fails.",
+   "notes": "Admin Households page on real data via GET /family-join/households, which groups citizens by family code. Scoped to the admin's district or village. Server-side search by code, name, village and district.",
    "start": "2026-11-02",
-   "target": "2026-11-05"
+   "target": null
   },
   {
    "id": 29,
    "module": "4. Household & Family",
    "feature": "Families & Family Tree page",
-   "status": "Not implemented",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "Page uses hard-coded sample families (FAM-2026-9901) and makes no API calls.",
+   "notes": "Families page shows the family tree for the selected household. Members are ordered by generation (grandparents, parents, head/spouse/siblings, children, grandchildren), one row per generation, with your own card marked. Old records without a relationship show as head, then Other.",
    "start": "2026-11-02",
-   "target": "2026-11-05"
+   "target": null
   },
   {
    "id": 30,
    "module": "4. Household & Family",
    "feature": "Join an existing family by OTP (family-join)",
-   "status": "Not implemented",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "Backend /family-join APIs exist. No frontend page calls them.",
+   "notes": "Join an existing household with a family code. The system looks up the code and sends an OTP to the household's masked email or phone. After verification, the household's village, district and members load. Dev profile can skip OTP (join-requires-otp=false); the app refuses to start with it off unless OTP delivery mode is log. Adding someone else stays strict in both modes.",
    "start": "2026-11-02",
-   "target": "2026-11-05"
+   "target": null
   },
   {
    "id": 31,
@@ -750,6 +750,26 @@
    "notes": "No evidence in the repo.",
    "start": "2026-11-12",
    "target": "2026-11-16"
+  },
+  {
+   "id": 76,
+   "module": "4. Household & Family",
+   "feature": "Household create or join on profile (family code, relationship)",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "Under Update Profile, choose 'Start a new household' or 'Join an existing household'. A new household gets a generated code (e.g. FLAB12CD34), shown with a Copy button. When joining, you pick your relationship to the head (son, daughter, father, spouse, grandfather and so on). Village and district are locked to the household's, and house number and pincode are copied from it.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 77,
+   "module": "5. Membership Approval Workflow (key gap raised)",
+   "feature": "Household join approval (village, district, super admin chain)",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "Joining is a request, not instant membership. It follows the village, district, super admin approval chain, routed by the household's location. On approval the member moves into the household with their relationship; on rejection the request is dropped; if returned for correction it stays on file. Reviewers see 'Joining household X as Daughter (head: ...)' in the approval modal and table. Members see a 'Waiting for approval' banner.",
+   "start": null,
+   "target": null
   }
  ]
 }

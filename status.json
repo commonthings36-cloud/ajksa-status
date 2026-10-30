@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-10-30",
  "features": [
   {
    "id": 1,
@@ -524,25 +524,65 @@
   {
    "id": 53,
    "module": "8. Events, Meetings & Volunteers",
-   "feature": "Events (create, register)",
-   "status": "Partial",
+   "feature": "Events (create, edit, role-based management)",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "Backend /events exists. No dedicated frontend. Member Events screen uses meetings.",
+   "notes": "Super Admin, District Admin and Village Admin create and manage events within their permissions. Event details: title, description, purpose, date, time, location and status. Backend APIs, validations and role-based access control are integrated with the frontend. Event listing, creation and editing screens updated.",
    "start": "2026-11-05",
-   "target": "2026-11-09"
+   "target": null
   },
   {
    "id": 54,
    "module": "8. Events, Meetings & Volunteers",
+   "feature": "Event invitations and participant management",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Admins invite all members in their jurisdiction or select specific users. Members can view the events they have been invited to.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 55,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "GPS-based event attendance with configurable radius",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Attendance is verified against the user's current location and the event's radius, which admins set (for example 100 m or 200 m). Includes location restrictions, error handling for invalid locations and duplicate attendance prevention.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 56,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Event attendance tracking and reports",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Admins review attendance records and monitor participant attendance.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 57,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Event location autocomplete (Google Places API)",
+   "status": "Not implemented",
+   "priority": "P3",
+   "notes": "Pending. API setup and integration requirements will be discussed and finalized later.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 58,
+   "module": "8. Events, Meetings & Volunteers",
    "feature": "QR event attendance",
    "status": "Partial",
    "priority": "P2",
-   "notes": "Geo check-in exists. No QR scan flow.",
+   "notes": "GPS-based attendance is done (see GPS attendance row). QR scan check-in is still not built.",
    "start": "2026-11-12",
    "target": "2026-11-16"
   },
   {
-   "id": 55,
+   "id": 59,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Campaigns",
    "status": "Partial",
@@ -552,7 +592,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 56,
+   "id": 60,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Volunteer management (skills, availability, blood donor)",
    "status": "Not implemented",
@@ -562,7 +602,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 57,
+   "id": 61,
    "module": "9. Emergency & Safety",
    "feature": "SOS button, I'm Safe check-in, emergency contact alerts",
    "status": "Not implemented",
@@ -572,7 +612,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 58,
+   "id": 62,
    "module": "9. Emergency & Safety",
    "feature": "Consent-based temporary location sharing",
    "status": "Not implemented",
@@ -582,7 +622,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 59,
+   "id": 63,
    "module": "10. Governance & Community Services",
    "feature": "Grievances (raise, assign, resolve)",
    "status": "Partial",
@@ -592,7 +632,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 60,
+   "id": 64,
    "module": "10. Governance & Community Services",
    "feature": "Polls and voting",
    "status": "Partial",
@@ -602,7 +642,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 61,
+   "id": 65,
    "module": "10. Governance & Community Services",
    "feature": "Life events (birth, death, marriage) and verification",
    "status": "Partial",
@@ -612,7 +652,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 62,
+   "id": 66,
    "module": "10. Governance & Community Services",
    "feature": "Committees and member assignment",
    "status": "Partial",
@@ -622,7 +662,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 63,
+   "id": 67,
    "module": "11. Finance",
    "feature": "Subscriptions, payments, donations, financial summary (API)",
    "status": "Implemented",
@@ -632,7 +672,7 @@
    "target": null
   },
   {
-   "id": 64,
+   "id": 68,
    "module": "11. Finance",
    "feature": "Finance pages",
    "status": "Partial",
@@ -642,7 +682,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 65,
+   "id": 69,
    "module": "11. Finance",
    "feature": "Online payment gateway",
    "status": "Not implemented",
@@ -652,7 +692,7 @@
    "target": "2026-11-12"
   },
   {
-   "id": 66,
+   "id": 70,
    "module": "12. Reports, Analytics & Data",
    "feature": "Executive analytics dashboard",
    "status": "Implemented",
@@ -662,7 +702,7 @@
    "target": null
   },
   {
-   "id": 67,
+   "id": 71,
    "module": "12. Reports, Analytics & Data",
    "feature": "Population, occupation and health analytics (proposal)",
    "status": "Not implemented",
@@ -672,7 +712,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 68,
+   "id": 72,
    "module": "12. Reports, Analytics & Data",
    "feature": "Report generation by village, district, gender, age",
    "status": "Partial",
@@ -682,7 +722,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 69,
+   "id": 73,
    "module": "12. Reports, Analytics & Data",
    "feature": "Export to CSV / Excel / PDF",
    "status": "Partial",
@@ -692,7 +732,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 70,
+   "id": 74,
    "module": "12. Reports, Analytics & Data",
    "feature": "Bulk import",
    "status": "Partial",
@@ -702,7 +742,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 71,
+   "id": 75,
    "module": "12. Reports, Analytics & Data",
    "feature": "System settings",
    "status": "Partial",
@@ -712,7 +752,7 @@
    "target": "2026-11-25"
   },
   {
-   "id": 72,
+   "id": 76,
    "module": "13. Platform / Non-functional",
    "feature": "Payload encryption (AES-GCM)",
    "status": "Implemented",
@@ -722,7 +762,7 @@
    "target": null
   },
   {
-   "id": 73,
+   "id": 77,
    "module": "13. Platform / Non-functional",
    "feature": "Backend automated tests",
    "status": "Implemented",
@@ -732,7 +772,7 @@
    "target": null
   },
   {
-   "id": 74,
+   "id": 78,
    "module": "13. Platform / Non-functional",
    "feature": "Frontend type-check",
    "status": "Implemented",
@@ -742,7 +782,7 @@
    "target": null
   },
   {
-   "id": 75,
+   "id": 79,
    "module": "13. Platform / Non-functional",
    "feature": "Multi-language support",
    "status": "Not implemented",
@@ -752,7 +792,7 @@
    "target": "2026-11-25"
   },
   {
-   "id": 76,
+   "id": 80,
    "module": "13. Platform / Non-functional",
    "feature": "Mobile apps, offline sync, AI search",
    "status": "Not implemented",
@@ -762,7 +802,7 @@
    "target": "2026-12-15"
   },
   {
-   "id": 77,
+   "id": 81,
    "module": "13. Platform / Non-functional",
    "feature": "Daily automated backups",
    "status": "Not implemented",

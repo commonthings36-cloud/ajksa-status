@@ -235,11 +235,11 @@
    "id": 24,
    "module": "3. Member Profile & Registration",
    "feature": "Members directory and member detail page",
-   "status": "Partial",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "UI exists. The /members list is empty live because no member exists until an approval completes. The detail page falls back to sample data.",
+   "notes": "Members directory lists active members from the API, with search and pagination, scoped to the admin's district or village. The member detail page shows the member's real profile and family details. Members appear once their membership application is approved.",
    "start": "2026-10-27",
-   "target": "2026-10-29"
+   "target": null
   },
   {
    "id": 25,

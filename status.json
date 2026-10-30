@@ -155,21 +155,21 @@
    "id": 16,
    "module": "2. Geography & Administrators",
    "feature": "District admin dashboard",
-   "status": "Partial",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "Page is about 66 lines. A thin shell with no district KPIs, queue or reports.",
+   "notes": "District admin dashboard scoped to the admin's own district, with district KPIs, the approval queue and reports.",
    "start": "2026-10-29",
-   "target": "2026-11-02"
+   "target": null
   },
   {
    "id": 17,
    "module": "2. Geography & Administrators",
    "feature": "Village admin dashboard",
-   "status": "Partial",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "Page is about 47 lines. A thin shell.",
+   "notes": "Village admin dashboard scoped to the admin's own village, with village KPIs and the applications waiting for review.",
    "start": "2026-10-29",
-   "target": "2026-11-02"
+   "target": null
   },
   {
    "id": 18,

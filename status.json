@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-11-01",
  "features": [
   {
    "id": 1,
@@ -475,11 +475,11 @@
    "id": 48,
    "module": "7. Communication",
    "feature": "In-app notifications",
-   "status": "Partial",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "Backend stores them. No member-side inbox page.",
+   "notes": "In-app notifications for campaign and poll publishing (sent to the audience and the area's admins, never the author), scheduled campaigns going live, event invitations and new events. No duplicates. Clicking a notification in the bell opens the relevant page.",
    "start": "2026-10-27",
-   "target": "2026-10-29"
+   "target": null
   },
   {
    "id": 49,
@@ -505,9 +505,9 @@
    "id": 51,
    "module": "7. Communication",
    "feature": "Community news feed, notices, circulars with media",
-   "status": "Not implemented",
+   "status": "Partial",
    "priority": "P2",
-   "notes": "No module in backend or frontend.",
+   "notes": "Member campaign feed with author, type and category badges, location, dates, inline poll voting, cover images, search and filters (category, type, timing, featured), pinned and featured sorting, load more, likes and one-level comments (server enforces 'Allow comments'). Circulars, video and notice-specific types are not built.",
    "start": "2026-11-12",
    "target": "2026-11-16"
   },
@@ -527,7 +527,7 @@
    "feature": "Events (create, edit, role-based management)",
    "status": "Implemented",
    "priority": "P1",
-   "notes": "Super Admin, District Admin and Village Admin create and manage events within their permissions. Event details: title, description, purpose, date, time, location and status. Backend APIs, validations and role-based access control are integrated with the frontend. Event listing, creation and editing screens updated.",
+   "notes": "Super Admin, District Admin and Village Admin create and manage events within their permissions. Event details: title, description, purpose, date, time, location and status. Multi-area creation: Super Admins can create for the whole organisation, selected districts or selected villages (across districts); District Admins for their district, selected villages or selected districts. One event is created per area in a single transaction, and nothing is created if any area is out of scope. 'Invite everyone' now includes village and district admins and leaves out only the inviter. Events are not auto-invited on creation, so invite per event.",
    "start": "2026-11-05",
    "target": null
   },
@@ -585,14 +585,84 @@
    "id": 59,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Campaigns",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Backend and page exist. Page falls back to sample data.",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Campaign engine with 12 types and type-specific forms: announcement, poll/voting, survey, registration, blood donation, sports, volunteer, social welfare, awareness, community initiative, external form, custom. Lifecycle: draft, scheduled, active, closed, archived; scheduled campaigns go live and close automatically. Actions: create, edit, draft, publish, schedule, close, reopen, archive, delete, pin, feature. Published campaigns or those with votes or linked events are archived, not deleted. 11 seeded categories that Super Admin can manage. Only poll behaviour is fully built; other types currently act like announcements.",
    "start": "2026-11-12",
-   "target": "2026-11-16"
+   "target": null
   },
   {
    "id": 60,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Campaign hierarchical permissions and audience targeting",
+   "status": "Implemented",
+   "priority": "P0",
+   "notes": "Permissions follow the owning district or village, not the creator, and are enforced in the API. Super Admin: everything. District Admin: the district and its villages. Village Admin: own village only. Members: only campaigns aimed at their area. Audience: whole organisation, all or selected districts, selected villages, or everyone in the owning area.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 61,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Campaign admin dashboard, list and audit history",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Dashboard tiles (total, active, upcoming, completed, drafts, participants, poll responses), campaigns by type and by category charts, recent campaigns, filterable list with row actions, create and edit form with image upload, poll builder and pickers. Every admin action is audited with before and after values and the actor.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 62,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Campaign surveys and form builder",
+   "status": "Not implemented",
+   "priority": "P1",
+   "notes": "Not built.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 63,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Campaign registrations (register button) and external form embedding",
+   "status": "Not implemented",
+   "priority": "P1",
+   "notes": "Not built. Registration and external form types currently behave like announcements.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 64,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Campaign reports, exports and other reactions",
+   "status": "Not implemented",
+   "priority": "P2",
+   "notes": "Analytics, exports, reactions beyond likes and comment reporting are not built.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 65,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "Event reminders and update or cancellation notifications",
+   "status": "Not implemented",
+   "priority": "P2",
+   "notes": "Not built.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 66,
+   "module": "8. Events, Meetings & Volunteers",
+   "feature": "QR registration, certificates, member-group audiences, galleries",
+   "status": "Not implemented",
+   "priority": "P3",
+   "notes": "Not built.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 67,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Volunteer management (skills, availability, blood donor)",
    "status": "Not implemented",
@@ -602,7 +672,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 61,
+   "id": 68,
    "module": "9. Emergency & Safety",
    "feature": "SOS button, I'm Safe check-in, emergency contact alerts",
    "status": "Not implemented",
@@ -612,7 +682,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 62,
+   "id": 69,
    "module": "9. Emergency & Safety",
    "feature": "Consent-based temporary location sharing",
    "status": "Not implemented",
@@ -622,7 +692,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 63,
+   "id": 70,
    "module": "10. Governance & Community Services",
    "feature": "Grievances (raise, assign, resolve)",
    "status": "Partial",
@@ -632,17 +702,17 @@
    "target": "2026-11-09"
   },
   {
-   "id": 64,
+   "id": 71,
    "module": "10. Governance & Community Services",
    "feature": "Polls and voting",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Backend complete. Pages fall back to sample polls and 'optimistic' votes.",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Polls are campaigns of type Poll; Community Polls (/member/polls) is a filtered view. One ballot per member (row lock plus unique index), single or multiple choice, anonymous option, audience and voting-window checks. Results can be shown always, after voting, after close or admin-only. Question and options lock once votes exist. Admin report shows votes per district and village. Sample data removed from the member polls page. Backend tests rewritten (28 passing).",
    "start": "2026-11-12",
-   "target": "2026-11-16"
+   "target": null
   },
   {
-   "id": 65,
+   "id": 72,
    "module": "10. Governance & Community Services",
    "feature": "Life events (birth, death, marriage) and verification",
    "status": "Partial",
@@ -652,7 +722,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 66,
+   "id": 73,
    "module": "10. Governance & Community Services",
    "feature": "Committees and member assignment",
    "status": "Partial",
@@ -662,7 +732,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 67,
+   "id": 74,
    "module": "11. Finance",
    "feature": "Subscriptions, payments, donations, financial summary (API)",
    "status": "Implemented",
@@ -672,7 +742,7 @@
    "target": null
   },
   {
-   "id": 68,
+   "id": 75,
    "module": "11. Finance",
    "feature": "Finance pages",
    "status": "Partial",
@@ -682,7 +752,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 69,
+   "id": 76,
    "module": "11. Finance",
    "feature": "Online payment gateway",
    "status": "Not implemented",
@@ -692,7 +762,7 @@
    "target": "2026-11-12"
   },
   {
-   "id": 70,
+   "id": 77,
    "module": "12. Reports, Analytics & Data",
    "feature": "Executive analytics dashboard",
    "status": "Implemented",
@@ -702,7 +772,7 @@
    "target": null
   },
   {
-   "id": 71,
+   "id": 78,
    "module": "12. Reports, Analytics & Data",
    "feature": "Population, occupation and health analytics (proposal)",
    "status": "Not implemented",
@@ -712,7 +782,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 72,
+   "id": 79,
    "module": "12. Reports, Analytics & Data",
    "feature": "Report generation by village, district, gender, age",
    "status": "Partial",
@@ -722,7 +792,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 73,
+   "id": 80,
    "module": "12. Reports, Analytics & Data",
    "feature": "Export to CSV / Excel / PDF",
    "status": "Partial",
@@ -732,7 +802,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 74,
+   "id": 81,
    "module": "12. Reports, Analytics & Data",
    "feature": "Bulk import",
    "status": "Partial",
@@ -742,7 +812,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 75,
+   "id": 82,
    "module": "12. Reports, Analytics & Data",
    "feature": "System settings",
    "status": "Partial",
@@ -752,7 +822,7 @@
    "target": "2026-11-25"
   },
   {
-   "id": 76,
+   "id": 83,
    "module": "13. Platform / Non-functional",
    "feature": "Payload encryption (AES-GCM)",
    "status": "Implemented",
@@ -762,7 +832,7 @@
    "target": null
   },
   {
-   "id": 77,
+   "id": 84,
    "module": "13. Platform / Non-functional",
    "feature": "Backend automated tests",
    "status": "Implemented",
@@ -772,7 +842,7 @@
    "target": null
   },
   {
-   "id": 78,
+   "id": 85,
    "module": "13. Platform / Non-functional",
    "feature": "Frontend type-check",
    "status": "Implemented",
@@ -782,7 +852,7 @@
    "target": null
   },
   {
-   "id": 79,
+   "id": 86,
    "module": "13. Platform / Non-functional",
    "feature": "Multi-language support",
    "status": "Not implemented",
@@ -792,7 +862,7 @@
    "target": "2026-11-25"
   },
   {
-   "id": 80,
+   "id": 87,
    "module": "13. Platform / Non-functional",
    "feature": "Mobile apps, offline sync, AI search",
    "status": "Not implemented",
@@ -802,7 +872,7 @@
    "target": "2026-12-15"
   },
   {
-   "id": 81,
+   "id": 88,
    "module": "13. Platform / Non-functional",
    "feature": "Daily automated backups",
    "status": "Not implemented",

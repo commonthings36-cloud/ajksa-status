@@ -753,21 +753,21 @@
   },
   {
    "id": 76,
-   "module": "11. Finance",
-   "feature": "Subscriptions, payments, donations, financial summary (API)",
+   "module": "10. Governance & Community Services",
+   "feature": "Committee announcements",
    "status": "Implemented",
-   "priority": "P1",
-   "notes": "Live: /finance/summary, /subscriptions, /donations return 200.",
+   "priority": "P2",
+   "notes": "President and admins publish, edit, delete and pin announcements visible to committee members; edited label and in-app notification on publish.",
    "start": null,
    "target": null
   },
   {
    "id": 77,
    "module": "11. Finance",
-   "feature": "Committee announcements",
+   "feature": "Subscriptions, payments, donations, financial summary (API)",
    "status": "Implemented",
-   "priority": "P2",
-   "notes": "President and admins publish, edit, delete and pin announcements visible to committee members; edited label and in-app notification on publish.",
+   "priority": "P1",
+   "notes": "Live: /finance/summary, /subscriptions, /donations return 200.",
    "start": null,
    "target": null
   },

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01",
+ "updated": "2026-11-02",
  "features": [
   {
    "id": 1,
@@ -127,7 +127,7 @@
    "feature": "Create and assign Village / District administrators",
    "status": "Implemented",
    "priority": "P0",
-   "notes": "Administrators page + /admin/administrators. Live: 1 village admin assigned.",
+   "notes": "Administrators page + /admin/administrators. Live: 1 village admin assigned. District and Village Admins also get a membership record and Digital ID Card on creation (existing admins backfilled), so they appear in committee member pickers.",
    "start": null,
    "target": null
   },
@@ -694,15 +694,25 @@
   {
    "id": 70,
    "module": "10. Governance & Community Services",
-   "feature": "Grievances (raise, assign, resolve)",
-   "status": "Partial",
+   "feature": "Grievance Desk (raise, assign, resolve)",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "Backend complete. Both pages fall back to sample data on error.",
+   "notes": "Members submit grievances with category, description and up to 5 attachments; unique ticket ID (GRV-YYYY-NNNNNN), district and village attached automatically. My Grievances list, detail page with conversation thread, history timeline, reply, accept/close and reopen. Role-scoped admin desk (village, district, super admin) with stats, district/village/category breakdowns, filters, assign/reassign, status update, remarks, request information, resolve/reject, close, reopen. Super admin settings for categories and escalation timelines. Attachments are validated and served through access-checked download. Notifications at every step.",
    "start": "2026-11-05",
-   "target": "2026-11-09"
+   "target": null
   },
   {
    "id": 71,
+   "module": "10. Governance & Community Services",
+   "feature": "Grievance escalation (village, district, super admin)",
+   "status": "Implemented",
+   "priority": "P1",
+   "notes": "Responsible level moves village to district to super admin, upward only. Default 5/7/7 days, configurable. Manual escalation by the member after the waiting period and automatic escalation by a scheduler; timer pauses while awaiting member response. Duplicate escalation prevented; next-level admin and member notified; full escalation history.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 72,
    "module": "10. Governance & Community Services",
    "feature": "Polls and voting",
    "status": "Implemented",
@@ -712,7 +722,7 @@
    "target": null
   },
   {
-   "id": 72,
+   "id": 73,
    "module": "10. Governance & Community Services",
    "feature": "Life events (birth, death, marriage) and verification",
    "status": "Partial",
@@ -722,17 +732,27 @@
    "target": "2026-11-16"
   },
   {
-   "id": 73,
+   "id": 74,
    "module": "10. Governance & Community Services",
-   "feature": "Committees and member assignment",
-   "status": "Partial",
+   "feature": "Committees: formation, leadership and members",
+   "status": "Implemented",
    "priority": "P2",
-   "notes": "Backend complete. Page falls back to sample committees.",
+   "notes": "Organisation, district and village committees; multi-district or multi-village create with a separate committee per place; member picker with search. Edit, deactivate/reactivate with reason, tenure and expiry (Term expired badge). President, Vice President, Secretary, Treasurer; add multiple members, per-member responsibility, change role, replace and remove. Duplicate-name and duplicate-member rules. Creator-level visibility, Manage Committees list with filters, committee page with History tab, My Committees for members. Audit log and in-app notifications.",
    "start": "2026-11-12",
-   "target": "2026-11-16"
+   "target": null
   },
   {
-   "id": 74,
+   "id": 75,
+   "module": "10. Governance & Community Services",
+   "feature": "Committee tasks and responsibilities",
+   "status": "Implemented",
+   "priority": "P2",
+   "notes": "President and admins create tasks (title, description, deadline, assignee from the same committee); status Pending / In Progress / Completed; overdue and due-soon badges, filters, completion summary. Members see only their own tasks; My Committees shows all your tasks in one place. Unfinished tasks of a removed member are flagged for reassignment.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 76,
    "module": "11. Finance",
    "feature": "Subscriptions, payments, donations, financial summary (API)",
    "status": "Implemented",
@@ -742,7 +762,17 @@
    "target": null
   },
   {
-   "id": 75,
+   "id": 77,
+   "module": "11. Finance",
+   "feature": "Committee announcements",
+   "status": "Implemented",
+   "priority": "P2",
+   "notes": "President and admins publish, edit, delete and pin announcements visible to committee members; edited label and in-app notification on publish.",
+   "start": null,
+   "target": null
+  },
+  {
+   "id": 78,
    "module": "11. Finance",
    "feature": "Finance pages",
    "status": "Partial",
@@ -752,7 +782,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 76,
+   "id": 79,
    "module": "11. Finance",
    "feature": "Online payment gateway",
    "status": "Not implemented",
@@ -762,7 +792,7 @@
    "target": "2026-11-12"
   },
   {
-   "id": 77,
+   "id": 80,
    "module": "12. Reports, Analytics & Data",
    "feature": "Executive analytics dashboard",
    "status": "Implemented",
@@ -772,7 +802,7 @@
    "target": null
   },
   {
-   "id": 78,
+   "id": 81,
    "module": "12. Reports, Analytics & Data",
    "feature": "Population, occupation and health analytics (proposal)",
    "status": "Not implemented",
@@ -782,7 +812,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 79,
+   "id": 82,
    "module": "12. Reports, Analytics & Data",
    "feature": "Report generation by village, district, gender, age",
    "status": "Partial",
@@ -792,7 +822,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 80,
+   "id": 83,
    "module": "12. Reports, Analytics & Data",
    "feature": "Export to CSV / Excel / PDF",
    "status": "Partial",
@@ -802,7 +832,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 81,
+   "id": 84,
    "module": "12. Reports, Analytics & Data",
    "feature": "Bulk import",
    "status": "Partial",
@@ -812,7 +842,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 82,
+   "id": 85,
    "module": "12. Reports, Analytics & Data",
    "feature": "System settings",
    "status": "Partial",
@@ -822,7 +852,7 @@
    "target": "2026-11-25"
   },
   {
-   "id": 83,
+   "id": 86,
    "module": "13. Platform / Non-functional",
    "feature": "Payload encryption (AES-GCM)",
    "status": "Implemented",
@@ -832,7 +862,7 @@
    "target": null
   },
   {
-   "id": 84,
+   "id": 87,
    "module": "13. Platform / Non-functional",
    "feature": "Backend automated tests",
    "status": "Implemented",
@@ -842,7 +872,7 @@
    "target": null
   },
   {
-   "id": 85,
+   "id": 88,
    "module": "13. Platform / Non-functional",
    "feature": "Frontend type-check",
    "status": "Implemented",
@@ -852,7 +882,7 @@
    "target": null
   },
   {
-   "id": 86,
+   "id": 89,
    "module": "13. Platform / Non-functional",
    "feature": "Multi-language support",
    "status": "Not implemented",
@@ -862,7 +892,7 @@
    "target": "2026-11-25"
   },
   {
-   "id": 87,
+   "id": 90,
    "module": "13. Platform / Non-functional",
    "feature": "Mobile apps, offline sync, AI search",
    "status": "Not implemented",
@@ -872,7 +902,7 @@
    "target": "2026-12-15"
   },
   {
-   "id": 88,
+   "id": 91,
    "module": "13. Platform / Non-functional",
    "feature": "Daily automated backups",
    "status": "Not implemented",

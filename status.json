@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-04",
  "features": [
   {
    "id": 1,
@@ -85,11 +85,11 @@
    "id": 9,
    "module": "1. Authentication & Accounts",
    "feature": "Audit trail of admin actions",
-   "status": "Partial",
+   "status": "Implemented",
    "priority": "P1",
-   "notes": "Backend AuditService writes events. The Audit Logs page shows hard-coded SAMPLE_AUDIT_LOGS and no API call, so real logs are not visible.",
+   "notes": "Audit events are recorded for admin actions and queried through a scoped audit API (filter by module, search, pagination). The Audit Logs page now reads real events instead of sample data.",
    "start": "2026-10-27",
-   "target": "2026-10-29"
+   "target": null
   },
   {
    "id": 10,
@@ -337,7 +337,7 @@
    "feature": "Approval Queue page (/admin/approvals)",
    "status": "Implemented",
    "priority": "P0",
-   "notes": "Pending approval tasks for the logged-in admin, with summary counts (pending, approved, rejected). Admins can approve, reject or return a task with a reason.",
+   "notes": "Pending approval tasks for the logged-in admin, with summary counts (pending, approved, rejected). Admins can approve, reject or return a task with a reason. Application details page (read-only) shows applicant profile, address, routing note and approval history; the decision is taken through the Review modal.",
    "start": "2026-10-24",
    "target": "2026-10-27"
   },
@@ -797,7 +797,7 @@
    "feature": "Executive analytics dashboard",
    "status": "Implemented",
    "priority": "P1",
-   "notes": "Live KPIs via /analytics/dashboard.",
+   "notes": "Live KPIs via /analytics/dashboard. Analytics page rebuilt with real data on the admin side.",
    "start": null,
    "target": null
   },
@@ -827,7 +827,7 @@
    "feature": "Export to CSV / Excel / PDF",
    "status": "Partial",
    "priority": "P1",
-   "notes": "Export jobs create CSV file names only. No Excel or PDF.",
+   "notes": "Admin export of members and administrators as CSV, scoped by the caller's role (village, district or all). No Excel or PDF yet, and no export of other data sets.",
    "start": "2026-11-05",
    "target": "2026-11-09"
   },
@@ -837,7 +837,7 @@
    "feature": "Bulk import",
    "status": "Partial",
    "priority": "P2",
-   "notes": "Import job API and UI exist. The UI shows a simulated job ('498 records') on error.",
+   "notes": "The old import/export module and its simulated job were removed. A Data Operations admin page now holds the export tool. Bulk import itself is not available yet.",
    "start": "2026-11-12",
    "target": "2026-11-16"
   },
@@ -847,7 +847,7 @@
    "feature": "System settings",
    "status": "Partial",
    "priority": "P3",
-   "notes": "Page and API exist. No settings stored.",
+   "notes": "Platform settings API (list, bulk update, public settings) with seeded defaults for membership dues and card validity (V33). Settings page rebuilt. Further settings still to be added.",
    "start": "2026-11-20",
    "target": "2026-11-25"
   },

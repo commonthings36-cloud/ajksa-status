@@ -104,16 +104,6 @@
   {
    "id": 11,
    "module": "2. Geography & Administrators",
-   "feature": "Tehsil and Area levels (in proposal)",
-   "status": "Partial",
-   "priority": "P2",
-   "notes": "Entities exist, but there is no API or UI for them.",
-   "start": "2026-11-12",
-   "target": "2026-11-16"
-  },
-  {
-   "id": 12,
-   "module": "2. Geography & Administrators",
    "feature": "Super admin creates or edits regions, districts and villages",
    "status": "Not implemented",
    "priority": "P1",
@@ -122,7 +112,7 @@
    "target": "2026-11-02"
   },
   {
-   "id": 13,
+   "id": 12,
    "module": "2. Geography & Administrators",
    "feature": "Create and assign Village / District administrators",
    "status": "Implemented",
@@ -132,7 +122,7 @@
    "target": null
   },
   {
-   "id": 14,
+   "id": 13,
    "module": "2. Geography & Administrators",
    "feature": "User management (search, activate, deactivate, delete)",
    "status": "Implemented",
@@ -142,7 +132,7 @@
    "target": null
   },
   {
-   "id": 15,
+   "id": 14,
    "module": "2. Geography & Administrators",
    "feature": "Super admin dashboard",
    "status": "Implemented",
@@ -152,7 +142,7 @@
    "target": null
   },
   {
-   "id": 16,
+   "id": 15,
    "module": "2. Geography & Administrators",
    "feature": "District admin dashboard",
    "status": "Implemented",
@@ -162,7 +152,7 @@
    "target": null
   },
   {
-   "id": 17,
+   "id": 16,
    "module": "2. Geography & Administrators",
    "feature": "Village admin dashboard",
    "status": "Implemented",
@@ -172,7 +162,7 @@
    "target": null
   },
   {
-   "id": 18,
+   "id": 17,
    "module": "3. Member Profile & Registration",
    "feature": "Member self-service profile (edit, save, photo upload)",
    "status": "Implemented",
@@ -182,7 +172,7 @@
    "target": null
   },
   {
-   "id": 19,
+   "id": 18,
    "module": "3. Member Profile & Registration",
    "feature": "Admin registers a citizen (multi-step form)",
    "status": "Implemented",
@@ -192,7 +182,7 @@
    "target": null
   },
   {
-   "id": 20,
+   "id": 19,
    "module": "3. Member Profile & Registration",
    "feature": "Citizens directory (search, filter, view)",
    "status": "Implemented",
@@ -202,7 +192,7 @@
    "target": null
   },
   {
-   "id": 21,
+   "id": 20,
    "module": "3. Member Profile & Registration",
    "feature": "Proposal fields: gender, marital status, street, area/tehsil, state, alternate number",
    "status": "Not implemented",
@@ -212,7 +202,7 @@
    "target": "2026-11-02"
   },
   {
-   "id": 22,
+   "id": 21,
    "module": "3. Member Profile & Registration",
    "feature": "Proposal fields: voter ID, other IDs, skills, volunteer status",
    "status": "Not implemented",
@@ -222,7 +212,7 @@
    "target": "2026-11-02"
   },
   {
-   "id": 23,
+   "id": 22,
    "module": "3. Member Profile & Registration",
    "feature": "Document upload (ID, certificates)",
    "status": "Not implemented",
@@ -232,7 +222,7 @@
    "target": "2026-11-05"
   },
   {
-   "id": 24,
+   "id": 23,
    "module": "3. Member Profile & Registration",
    "feature": "Members directory and member detail page",
    "status": "Implemented",
@@ -242,7 +232,7 @@
    "target": null
   },
   {
-   "id": 25,
+   "id": 24,
    "module": "3. Member Profile & Registration",
    "feature": "Search by name, parent, mobile, village, area, house no.",
    "status": "Partial",
@@ -252,7 +242,7 @@
    "target": "2026-11-02"
   },
   {
-   "id": 26,
+   "id": 25,
    "module": "3. Member Profile & Registration",
    "feature": "Membership types and renewal date handling",
    "status": "Partial",
@@ -262,7 +252,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 27,
+   "id": 26,
    "module": "4. Household & Family",
    "feature": "Household and family CRUD (API)",
    "status": "Implemented",
@@ -272,7 +262,7 @@
    "target": null
   },
   {
-   "id": 28,
+   "id": 27,
    "module": "4. Household & Family",
    "feature": "Households admin page",
    "status": "Implemented",
@@ -282,7 +272,7 @@
    "target": null
   },
   {
-   "id": 29,
+   "id": 28,
    "module": "4. Household & Family",
    "feature": "Families & Family Tree page",
    "status": "Implemented",
@@ -292,7 +282,7 @@
    "target": null
   },
   {
-   "id": 30,
+   "id": 29,
    "module": "4. Household & Family",
    "feature": "Join an existing family by OTP (family-join)",
    "status": "Implemented",
@@ -302,7 +292,7 @@
    "target": null
   },
   {
-   "id": 31,
+   "id": 30,
    "module": "4. Household & Family",
    "feature": "Household database fields (GPS, students, seniors, photo)",
    "status": "Not implemented",
@@ -312,7 +302,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 32,
+   "id": 31,
    "module": "4. Household & Family",
    "feature": "Household create or join on profile (family code, relationship)",
    "status": "Implemented",
@@ -322,7 +312,7 @@
    "target": null
   },
   {
-   "id": 33,
+   "id": 32,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Backend: submit, 3-tier routing, tasks, history, approve / reject / return",
    "status": "Implemented",
@@ -332,7 +322,7 @@
    "target": null
   },
   {
-   "id": 34,
+   "id": 33,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Approval Queue page (/admin/approvals)",
    "status": "Implemented",
@@ -342,7 +332,7 @@
    "target": "2026-10-27"
   },
   {
-   "id": 35,
+   "id": 34,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Applications list page (/admin/applications)",
    "status": "Implemented",
@@ -352,7 +342,7 @@
    "target": "2026-10-27"
   },
   {
-   "id": 36,
+   "id": 35,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Profile completed -> goes to village, district and super admin",
    "status": "Implemented",
@@ -362,7 +352,7 @@
    "target": "2026-10-27"
   },
   {
-   "id": 37,
+   "id": 36,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Village admin can see the queue",
    "status": "Implemented",
@@ -372,7 +362,7 @@
    "target": "2026-10-27"
   },
   {
-   "id": 38,
+   "id": 37,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "District / Super admin see applications in their scope",
    "status": "Implemented",
@@ -382,7 +372,7 @@
    "target": "2026-10-27"
   },
   {
-   "id": 39,
+   "id": 38,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Return for correction / request changes (admin UI)",
    "status": "Not implemented",
@@ -392,7 +382,7 @@
    "target": "2026-10-27"
   },
   {
-   "id": 40,
+   "id": 39,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Applicant sees status, correction reason, can resubmit",
    "status": "Implemented",
@@ -402,7 +392,7 @@
    "target": null
   },
   {
-   "id": 41,
+   "id": 40,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Card unlocks only after approval",
    "status": "Implemented",
@@ -412,7 +402,7 @@
    "target": null
   },
   {
-   "id": 42,
+   "id": 41,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Notify approver and applicant",
    "status": "Partial",
@@ -422,7 +412,7 @@
    "target": "2026-10-29"
   },
   {
-   "id": 43,
+   "id": 42,
    "module": "5. Membership Approval Workflow (key gap raised)",
    "feature": "Household join approval (village, district, super admin chain)",
    "status": "Implemented",
@@ -432,7 +422,7 @@
    "target": null
   },
   {
-   "id": 44,
+   "id": 43,
    "module": "6. Digital Membership Card & Verification",
    "feature": "Digital card (front and back, photo, QR)",
    "status": "Implemented",
@@ -442,7 +432,7 @@
    "target": null
   },
   {
-   "id": 45,
+   "id": 44,
    "module": "6. Digital Membership Card & Verification",
    "feature": "Public QR verification page",
    "status": "Partial",
@@ -452,7 +442,7 @@
    "target": "2026-10-27"
   },
   {
-   "id": 46,
+   "id": 45,
    "module": "6. Digital Membership Card & Verification",
    "feature": "Admin card list, issue, revoke",
    "status": "Partial",
@@ -462,7 +452,7 @@
    "target": "2026-10-29"
   },
   {
-   "id": 47,
+   "id": 46,
    "module": "7. Communication",
    "feature": "Targeted broadcast (district, village, role)",
    "status": "Partial",
@@ -472,7 +462,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 48,
+   "id": 47,
    "module": "7. Communication",
    "feature": "In-app notifications",
    "status": "Implemented",
@@ -482,7 +472,7 @@
    "target": null
   },
   {
-   "id": 49,
+   "id": 48,
    "module": "7. Communication",
    "feature": "SMS / WhatsApp / Push (FCM) / Email delivery",
    "status": "Not implemented",
@@ -492,7 +482,7 @@
    "target": "2026-11-12"
   },
   {
-   "id": 50,
+   "id": 49,
    "module": "7. Communication",
    "feature": "Outbox monitoring",
    "status": "Partial",
@@ -502,7 +492,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 51,
+   "id": 50,
    "module": "7. Communication",
    "feature": "Community news feed, notices, circulars with media",
    "status": "Partial",
@@ -512,7 +502,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 52,
+   "id": 51,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Meetings: create, RSVP, geofenced check-in, report",
    "status": "Implemented",
@@ -522,7 +512,7 @@
    "target": null
   },
   {
-   "id": 53,
+   "id": 52,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Events (create, edit, role-based management)",
    "status": "Implemented",
@@ -532,7 +522,7 @@
    "target": null
   },
   {
-   "id": 54,
+   "id": 53,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Event invitations and participant management",
    "status": "Implemented",
@@ -542,7 +532,7 @@
    "target": null
   },
   {
-   "id": 55,
+   "id": 54,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "GPS-based event attendance with configurable radius",
    "status": "Implemented",
@@ -552,7 +542,7 @@
    "target": null
   },
   {
-   "id": 56,
+   "id": 55,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Event attendance tracking and reports",
    "status": "Implemented",
@@ -562,7 +552,7 @@
    "target": null
   },
   {
-   "id": 57,
+   "id": 56,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Event location autocomplete (Google Places API)",
    "status": "Not implemented",
@@ -572,7 +562,7 @@
    "target": null
   },
   {
-   "id": 58,
+   "id": 57,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "QR event attendance",
    "status": "Partial",
@@ -582,7 +572,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 59,
+   "id": 58,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Campaigns",
    "status": "Implemented",
@@ -592,7 +582,7 @@
    "target": null
   },
   {
-   "id": 60,
+   "id": 59,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Campaign hierarchical permissions and audience targeting",
    "status": "Implemented",
@@ -602,7 +592,7 @@
    "target": null
   },
   {
-   "id": 61,
+   "id": 60,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Campaign admin dashboard, list and audit history",
    "status": "Implemented",
@@ -612,7 +602,7 @@
    "target": null
   },
   {
-   "id": 62,
+   "id": 61,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Campaign surveys and form builder",
    "status": "Not implemented",
@@ -622,7 +612,7 @@
    "target": null
   },
   {
-   "id": 63,
+   "id": 62,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Campaign registrations (register button) and external form embedding",
    "status": "Not implemented",
@@ -632,7 +622,7 @@
    "target": null
   },
   {
-   "id": 64,
+   "id": 63,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Campaign reports, exports and other reactions",
    "status": "Not implemented",
@@ -642,7 +632,7 @@
    "target": null
   },
   {
-   "id": 65,
+   "id": 64,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Event reminders and update or cancellation notifications",
    "status": "Not implemented",
@@ -652,7 +642,7 @@
    "target": null
   },
   {
-   "id": 66,
+   "id": 65,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "QR registration, certificates, member-group audiences, galleries",
    "status": "Not implemented",
@@ -662,7 +652,7 @@
    "target": null
   },
   {
-   "id": 67,
+   "id": 66,
    "module": "8. Events, Meetings & Volunteers",
    "feature": "Volunteer management (skills, availability, blood donor)",
    "status": "Not implemented",
@@ -672,7 +662,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 68,
+   "id": 67,
    "module": "9. Emergency & Safety",
    "feature": "SOS button, I'm Safe check-in, emergency contact alerts",
    "status": "Not implemented",
@@ -682,7 +672,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 69,
+   "id": 68,
    "module": "9. Emergency & Safety",
    "feature": "Consent-based temporary location sharing",
    "status": "Not implemented",
@@ -692,7 +682,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 70,
+   "id": 69,
    "module": "10. Governance & Community Services",
    "feature": "Grievance Desk (raise, assign, resolve)",
    "status": "Implemented",
@@ -702,7 +692,7 @@
    "target": null
   },
   {
-   "id": 71,
+   "id": 70,
    "module": "10. Governance & Community Services",
    "feature": "Grievance escalation (village, district, super admin)",
    "status": "Implemented",
@@ -712,7 +702,7 @@
    "target": null
   },
   {
-   "id": 72,
+   "id": 71,
    "module": "10. Governance & Community Services",
    "feature": "Polls and voting",
    "status": "Implemented",
@@ -722,7 +712,7 @@
    "target": null
   },
   {
-   "id": 73,
+   "id": 72,
    "module": "10. Governance & Community Services",
    "feature": "Life events (birth, death, marriage) and verification",
    "status": "Partial",
@@ -732,7 +722,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 74,
+   "id": 73,
    "module": "10. Governance & Community Services",
    "feature": "Committees: formation, leadership and members",
    "status": "Implemented",
@@ -742,7 +732,7 @@
    "target": null
   },
   {
-   "id": 75,
+   "id": 74,
    "module": "10. Governance & Community Services",
    "feature": "Committee tasks and responsibilities",
    "status": "Implemented",
@@ -752,7 +742,7 @@
    "target": null
   },
   {
-   "id": 76,
+   "id": 75,
    "module": "10. Governance & Community Services",
    "feature": "Committee announcements",
    "status": "Implemented",
@@ -762,7 +752,7 @@
    "target": null
   },
   {
-   "id": 77,
+   "id": 76,
    "module": "11. Finance",
    "feature": "Subscriptions, payments, donations, financial summary (API)",
    "status": "Implemented",
@@ -772,7 +762,7 @@
    "target": null
   },
   {
-   "id": 78,
+   "id": 77,
    "module": "11. Finance",
    "feature": "Finance pages",
    "status": "Partial",
@@ -782,7 +772,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 79,
+   "id": 78,
    "module": "11. Finance",
    "feature": "Online payment gateway",
    "status": "Not implemented",
@@ -792,7 +782,7 @@
    "target": "2026-11-12"
   },
   {
-   "id": 80,
+   "id": 79,
    "module": "12. Reports, Analytics & Data",
    "feature": "Executive analytics dashboard",
    "status": "Implemented",
@@ -802,7 +792,7 @@
    "target": null
   },
   {
-   "id": 81,
+   "id": 80,
    "module": "12. Reports, Analytics & Data",
    "feature": "Population, occupation and health analytics (proposal)",
    "status": "Not implemented",
@@ -812,7 +802,7 @@
    "target": "2026-11-20"
   },
   {
-   "id": 82,
+   "id": 81,
    "module": "12. Reports, Analytics & Data",
    "feature": "Report generation by village, district, gender, age",
    "status": "Partial",
@@ -822,7 +812,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 83,
+   "id": 82,
    "module": "12. Reports, Analytics & Data",
    "feature": "Export to CSV / Excel / PDF",
    "status": "Partial",
@@ -832,7 +822,7 @@
    "target": "2026-11-09"
   },
   {
-   "id": 84,
+   "id": 83,
    "module": "12. Reports, Analytics & Data",
    "feature": "Bulk import",
    "status": "Partial",
@@ -842,7 +832,7 @@
    "target": "2026-11-16"
   },
   {
-   "id": 85,
+   "id": 84,
    "module": "12. Reports, Analytics & Data",
    "feature": "System settings",
    "status": "Partial",
@@ -852,7 +842,7 @@
    "target": "2026-11-25"
   },
   {
-   "id": 86,
+   "id": 85,
    "module": "13. Platform / Non-functional",
    "feature": "Payload encryption (AES-GCM)",
    "status": "Implemented",
@@ -862,7 +852,7 @@
    "target": null
   },
   {
-   "id": 87,
+   "id": 86,
    "module": "13. Platform / Non-functional",
    "feature": "Backend automated tests",
    "status": "Implemented",
@@ -872,7 +862,7 @@
    "target": null
   },
   {
-   "id": 88,
+   "id": 87,
    "module": "13. Platform / Non-functional",
    "feature": "Frontend type-check",
    "status": "Implemented",
@@ -882,7 +872,7 @@
    "target": null
   },
   {
-   "id": 89,
+   "id": 88,
    "module": "13. Platform / Non-functional",
    "feature": "Multi-language support",
    "status": "Not implemented",
@@ -892,7 +882,7 @@
    "target": "2026-11-25"
   },
   {
-   "id": 90,
+   "id": 89,
    "module": "13. Platform / Non-functional",
    "feature": "Mobile apps, offline sync, AI search",
    "status": "Not implemented",
@@ -902,7 +892,7 @@
    "target": "2026-12-15"
   },
   {
-   "id": 91,
+   "id": 90,
    "module": "13. Platform / Non-functional",
    "feature": "Daily automated backups",
    "status": "Not implemented",
